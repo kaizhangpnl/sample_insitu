@@ -8,4 +8,6 @@ sample.ncl : sample model data at given lat/lon
 
              the output variables will have dimensions like [time, station_index] or [time, lev, station_index] 
 
-             the station index is put into the rightest dimension so that we can use CDO to process the data.  
+             the station index is put into the rightest dimension so that we can use CDO (https://code.zmaw.de/projects/cdo) to process the data (e.g. temporal averaging).  
+
+
