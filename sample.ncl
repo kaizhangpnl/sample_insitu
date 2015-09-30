@@ -14,6 +14,10 @@
 
     system("rm " + fno) 
 
+;;...........................................................  
+;;  load data
+;;...........................................................  
+
     fla = addfile(fna, "r")   
     flb = addfile(fnb, "r")   
     flo = addfile(fno, "c")   
@@ -21,7 +25,7 @@
     lat = flb->lat
     lon = flb->lon
 
-    ns = dimsizes(lat) 
+    ns = dimsizes(lat) ; number of stations 
 
     vn = getfilevarnames(fla)  ; get names of all variables on file
 
@@ -29,8 +33,11 @@
 
     time = fla->time
 
+;;...........................................................  
+;;  loop over variables 
+;;...........................................................  
 
-    do n=0,nv-1              ; loop thru each variable
+    do n=0,nv-1
 
        vv = fla->$vn(n)$        ; read the varible to memory
          
