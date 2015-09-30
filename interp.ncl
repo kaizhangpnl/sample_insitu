@@ -49,7 +49,7 @@
           n2 = dimsizes(va(0,:,0)) 
           n3 = dimsizes(va(0,0,:)) 
 
-          wn = "OUT_"  + bname
+          wn = bname
 
           wa = new((/n1,ns/),"float") 
 
