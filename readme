@@ -1,4 +1,5 @@
 
+Required software: NCL (http://www.ncl.ucar.edu/) 
 
 create_latlon.ncl : create latlon information file latlon.nc 
 
