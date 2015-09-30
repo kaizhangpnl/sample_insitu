@@ -1,7 +1,8 @@
 
 ;;  model history file 
 
-    fna = "model_freq_201001.nc" 
+    fna = "example_monthly_2D.nc"
+    fna = "example_monthly_3D.nc"
 
 ;;  site location information 
 
