@@ -3,7 +3,7 @@ Required software: NCL (http://www.ncl.ucar.edu/)
 
 create_latlon.ncl : create latlon information file latlon.nc 
 
-sample.ncl : sample model data at given lat/lon 
+sample.ncl : sample grid-box mean model data at given lat/lon 
              all variables in the history file will be sampled at given locations 
 
              the output variables will have dimensions like [time, station_index] or [time, lev, station_index] 
