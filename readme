@@ -1,0 +1,6 @@
+
+
+create_latlon.ncl : create latlon information file latlon.nc 
+
+interp.ncl : sample model data at given lat/lon 
+
