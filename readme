@@ -3,4 +3,8 @@
 create_latlon.ncl : create latlon information file latlon.nc 
 
 interp.ncl : sample model data at given lat/lon 
+             all variables in the history file will be sampled at given locations 
 
+             the output variables will have dimensions like [time, station_index] or [time, lev, station_index] 
+
+             the station index is put into the rightest dimension so that we can use CDO to process the data.  
