@@ -34,6 +34,18 @@
     time = fla->time
 
 ;;...........................................................  
+;;  determine if we have levels 
+;;...........................................................  
+    have_levels = isfilevar(fla,"lev")
+
+    if(have_levels) then 
+       hyam = fla->hyam 
+       hybm = fla->hybm 
+       hyai = fla->hyai
+       hybi = fla->hybi
+    end if 
+
+;;...........................................................  
 ;;  loop over variables 
 ;;...........................................................  
 
@@ -138,6 +150,16 @@
 
    end do
 
+
+;;........................................................................................
+;; Coordinate info
+;;........................................................................................
+   if(have_levels) then 
+      flo->hyam=hyam 
+      flo->hybm=hybm 
+      flo->hyai=hyai 
+      flo->hybi=hybi 
+   end if 
 
    stname = asciiread("st.dat",-1,"string")
 
