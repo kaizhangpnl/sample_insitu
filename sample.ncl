@@ -139,5 +139,31 @@
    end do
 
 
+   stname = asciiread("st.dat",-1,"string")
+
+   wallClock = systemfunc("date")
+
+;;........................................................................................
+;; file provenance
+;;........................................................................................
+
+   fatt                          = True
+   fatt@experiment               = "INSITU"
+   fatt@source                   = "https://wiki.met.no/_media/aerocom/INSITU_Station_Inventory.xlsx"
+   fatt@creat_time               = wallClock
+
+   fatt@station_name = ""
+
+   do is = ns-1,0,1
+      it = is + 1
+      myname = "station_name_" + it
+      fatt@$myname$         = stname(is)
+   end do
+
+   fileattdef( flo, fatt )
+
+
+
+
 
 
