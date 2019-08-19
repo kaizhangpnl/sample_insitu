@@ -51,7 +51,16 @@
    do is = nlat-1,0,1
       it = is + 1 
       ;; 330e_15n 
-      print(dblquote + str_strip(sprintf("%8.3f",lon(is)))+"e_" + str_strip(sprintf("%8.3f",lat(is)))+"n" + dblquote + ",")
+      ;;print(dblquote + str_strip(round(lon(is),3))+"e_" + str_strip(round(lat(is),3))+"n" + dblquote + ",")
+      if(lat(is).gt.0.) then 
+         slon = lon(is)
+         slat = lat(is)
+         print(dblquote + str_strip(sprintf("%8.3f",slon))+"e_" + str_strip(sprintf("%8.3f",slat))+"n" + dblquote + ",")
+      else
+         slon = lon(is)
+         slat = -lat(is)
+         print(dblquote + str_strip(sprintf("%8.3f",slon))+"e_" + str_strip(sprintf("%8.3f",slat))+"s" + dblquote + ",")
+      end if
       myname = "station_name_" + it 
       fatt@$myname$         = stname(is) 
    end do
