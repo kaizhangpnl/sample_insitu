@@ -41,8 +41,17 @@
 
    fatt@station_name = ""
 
+   dblquote = integertochar(34) 
+
+   print(" ")
+   print(" ")
+   print("print strings for cesm/e3sm location input ") 
+   print(" ")
+   print(" ")
    do is = nlat-1,0,1
       it = is + 1 
+      ;; 330e_15n 
+      print(dblquote + str_strip(sprintf("%8.3f",lon(is)))+"e_" + str_strip(sprintf("%8.3f",lat(is)))+"n" + dblquote + ",")
       myname = "station_name_" + it 
       fatt@$myname$         = stname(is) 
    end do
